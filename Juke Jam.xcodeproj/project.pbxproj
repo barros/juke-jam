@@ -7,21 +7,69 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1F131DE920FF8DE100B1A8BE /* DesignableImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F131DE820FF8DE100B1A8BE /* DesignableImage.swift */; };
+		1F131DF320FFA1A800B1A8BE /* GuestRecommendedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F131DF220FFA1A800B1A8BE /* GuestRecommendedVC.swift */; };
+		1F1A44F021A0C92700FDE08A /* Routing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F1A44EF21A0C92700FDE08A /* Routing.swift */; };
+		1F410D042113A4FD002D39BA /* NotoSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1F410D022113A4F4002D39BA /* NotoSans-Bold.ttf */; };
+		1F410D052113A4FD002D39BA /* NotoSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1F410D032113A4F7002D39BA /* NotoSans-Regular.ttf */; };
+		1F6B002E20E2A3790006E9E3 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F6B002D20E2A3790006E9E3 /* AVFoundation.framework */; };
 		1F83F7CE20C5D07100741FB0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F83F7CD20C5D07100741FB0 /* AppDelegate.swift */; };
 		1F83F7D020C5D07100741FB0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F83F7CF20C5D07100741FB0 /* ViewController.swift */; };
-		1F83F7D320C5D07100741FB0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1F83F7D120C5D07100741FB0 /* Main.storyboard */; };
 		1F83F7D520C5D07400741FB0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1F83F7D420C5D07400741FB0 /* Assets.xcassets */; };
 		1F83F7D820C5D07400741FB0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1F83F7D620C5D07400741FB0 /* LaunchScreen.storyboard */; };
+		1F83F7E020C5D0A900741FB0 /* DesignableButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F83F7DF20C5D0A900741FB0 /* DesignableButton.swift */; };
+		1F83F7EA20C63CF300741FB0 /* Lato-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1F83F7E820C63CF300741FB0 /* Lato-Regular.ttf */; };
+		1F83F7EB20C63CF300741FB0 /* Comfortaa-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1F83F7E920C63CF300741FB0 /* Comfortaa-Regular.ttf */; };
+		1F99BCEA21064B8D0015A71E /* EnterPlaylistVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F99BCE921064B8D0015A71E /* EnterPlaylistVC.swift */; };
+		1FDF254F20F7F86500A58645 /* HostAllPLVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FDF254E20F7F86500A58645 /* HostAllPLVC.swift */; };
+		1FDF255120F8EE6000A58645 /* SearchSongVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FDF255020F8EE6000A58645 /* SearchSongVC.swift */; };
+		1FDF255320F91D2C00A58645 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1FDF255220F91D2C00A58645 /* Main.storyboard */; };
+		1FDF255520F9312E00A58645 /* Playlist.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FDF255420F9312E00A58645 /* Playlist.swift */; };
+		1FDF255920F94D4C00A58645 /* SearchResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FDF255820F94D4C00A58645 /* SearchResult.swift */; };
+		1FDF259B20FE387B00A58645 /* SF-Pro-Display-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 1FDF259A20FE387B00A58645 /* SF-Pro-Display-Regular.otf */; };
+		1FDF259D20FE388900A58645 /* SF-Pro-Text-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 1FDF259C20FE388900A58645 /* SF-Pro-Text-Light.otf */; };
+		1FF2D6BD21079B480070C670 /* PlaylistRecommendationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FF2D6BC21079B480070C670 /* PlaylistRecommendationsViewController.swift */; };
+		1FF2D6BF2108E3ED0070C670 /* PlaylistRecommendedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FF2D6BE2108E3EC0070C670 /* PlaylistRecommendedCell.swift */; };
+		1FFEAF7620FE7A6800D40505 /* DesignablePopup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FFEAF7520FE7A6800D40505 /* DesignablePopup.swift */; };
+		1FFEAF7820FE816600D40505 /* PopupVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FFEAF7720FE816600D40505 /* PopupVC.swift */; };
+		1FFEAF7A20FE856700D40505 /* SF-Pro-Display-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 1FFEAF7920FE856600D40505 /* SF-Pro-Display-Medium.otf */; };
+		91EBAB8CA812AE05C717A713 /* Pods_Juke_Jam.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42F84D3CC73414B4CE60A840 /* Pods_Juke_Jam.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1F131DE820FF8DE100B1A8BE /* DesignableImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignableImage.swift; sourceTree = "<group>"; };
+		1F131DF220FFA1A800B1A8BE /* GuestRecommendedVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuestRecommendedVC.swift; sourceTree = "<group>"; };
+		1F1A44EF21A0C92700FDE08A /* Routing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Routing.swift; sourceTree = "<group>"; };
+		1F410D022113A4F4002D39BA /* NotoSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSans-Bold.ttf"; sourceTree = "<group>"; };
+		1F410D032113A4F7002D39BA /* NotoSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSans-Regular.ttf"; sourceTree = "<group>"; };
+		1F6B002D20E2A3790006E9E3 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		1F83F7CA20C5D07100741FB0 /* Juke Jam.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Juke Jam.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1F83F7CD20C5D07100741FB0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1F83F7CF20C5D07100741FB0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		1F83F7D220C5D07100741FB0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1F83F7D420C5D07400741FB0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1F83F7D720C5D07400741FB0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1F83F7D920C5D07400741FB0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1F83F7DF20C5D0A900741FB0 /* DesignableButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignableButton.swift; sourceTree = "<group>"; };
+		1F83F7E820C63CF300741FB0 /* Lato-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Regular.ttf"; sourceTree = "<group>"; };
+		1F83F7E920C63CF300741FB0 /* Comfortaa-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Comfortaa-Regular.ttf"; sourceTree = "<group>"; };
+		1F99BCE921064B8D0015A71E /* EnterPlaylistVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterPlaylistVC.swift; sourceTree = "<group>"; };
+		1FB29A4D20EBEC1400E52948 /* SpotifyLogin.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SpotifyLogin.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1FDF235C20F67B6200A58645 /* Starscream.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Starscream.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1FDF254E20F7F86500A58645 /* HostAllPLVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HostAllPLVC.swift; sourceTree = "<group>"; };
+		1FDF255020F8EE6000A58645 /* SearchSongVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchSongVC.swift; sourceTree = "<group>"; };
+		1FDF255220F91D2C00A58645 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		1FDF255420F9312E00A58645 /* Playlist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Playlist.swift; sourceTree = "<group>"; };
+		1FDF255820F94D4C00A58645 /* SearchResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResult.swift; sourceTree = "<group>"; };
+		1FDF259A20FE387B00A58645 /* SF-Pro-Display-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Display-Regular.otf"; sourceTree = "<group>"; };
+		1FDF259C20FE388900A58645 /* SF-Pro-Text-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Text-Light.otf"; sourceTree = "<group>"; };
+		1FF2D6BC21079B480070C670 /* PlaylistRecommendationsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaylistRecommendationsViewController.swift; sourceTree = "<group>"; };
+		1FF2D6BE2108E3EC0070C670 /* PlaylistRecommendedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaylistRecommendedCell.swift; sourceTree = "<group>"; };
+		1FFEAF7520FE7A6800D40505 /* DesignablePopup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignablePopup.swift; sourceTree = "<group>"; };
+		1FFEAF7720FE816600D40505 /* PopupVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopupVC.swift; sourceTree = "<group>"; };
+		1FFEAF7920FE856600D40505 /* SF-Pro-Display-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Display-Medium.otf"; sourceTree = "<group>"; };
+		2BF4D05F3DE8F290EA3131B2 /* Pods-Juke Jam.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Juke Jam.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Juke Jam/Pods-Juke Jam.debug.xcconfig"; sourceTree = "<group>"; };
+		42F84D3CC73414B4CE60A840 /* Pods_Juke_Jam.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Juke_Jam.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CEAFA6F58BAFB84E01E981E0 /* Pods-Juke Jam.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Juke Jam.release.xcconfig"; path = "Pods/Target Support Files/Pods-Juke Jam/Pods-Juke Jam.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +77,73 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1F6B002E20E2A3790006E9E3 /* AVFoundation.framework in Frameworks */,
+				91EBAB8CA812AE05C717A713 /* Pods_Juke_Jam.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1F0F49D7C3C35152F8B54594 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1FDF235C20F67B6200A58645 /* Starscream.framework */,
+				1FB29A4D20EBEC1400E52948 /* SpotifyLogin.framework */,
+				1F6B002D20E2A3790006E9E3 /* AVFoundation.framework */,
+				42F84D3CC73414B4CE60A840 /* Pods_Juke_Jam.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		1F131DEA20FFA06100B1A8BE /* Host */ = {
+			isa = PBXGroup;
+			children = (
+				1FDF254E20F7F86500A58645 /* HostAllPLVC.swift */,
+				1FF2D6BC21079B480070C670 /* PlaylistRecommendationsViewController.swift */,
+				1FF2D6BE2108E3EC0070C670 /* PlaylistRecommendedCell.swift */,
+			);
+			path = Host;
+			sourceTree = "<group>";
+		};
+		1F131DEE20FFA11800B1A8BE /* Guest */ = {
+			isa = PBXGroup;
+			children = (
+				1FFEAF7720FE816600D40505 /* PopupVC.swift */,
+				1FDF255020F8EE6000A58645 /* SearchSongVC.swift */,
+				1F131DF220FFA1A800B1A8BE /* GuestRecommendedVC.swift */,
+				1F99BCE921064B8D0015A71E /* EnterPlaylistVC.swift */,
+			);
+			path = Guest;
+			sourceTree = "<group>";
+		};
+		1F131DF020FFA14A00B1A8BE /* Designables */ = {
+			isa = PBXGroup;
+			children = (
+				1F83F7DF20C5D0A900741FB0 /* DesignableButton.swift */,
+				1F131DE820FF8DE100B1A8BE /* DesignableImage.swift */,
+				1FFEAF7520FE7A6800D40505 /* DesignablePopup.swift */,
+			);
+			path = Designables;
+			sourceTree = "<group>";
+		};
+		1F131DF120FFA15F00B1A8BE /* Custom Classes */ = {
+			isa = PBXGroup;
+			children = (
+				1FDF255420F9312E00A58645 /* Playlist.swift */,
+				1FDF255820F94D4C00A58645 /* SearchResult.swift */,
+			);
+			path = "Custom Classes";
+			sourceTree = "<group>";
+		};
 		1F83F7C120C5D07100741FB0 = {
 			isa = PBXGroup;
 			children = (
 				1F83F7CC20C5D07100741FB0 /* Juke Jam */,
+				1F83F7D420C5D07400741FB0 /* Assets.xcassets */,
 				1F83F7CB20C5D07100741FB0 /* Products */,
+				CA3D228A3F670D507B1F5B37 /* Pods */,
+				1F0F49D7C3C35152F8B54594 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,14 +158,42 @@
 		1F83F7CC20C5D07100741FB0 /* Juke Jam */ = {
 			isa = PBXGroup;
 			children = (
+				1F1A44EF21A0C92700FDE08A /* Routing.swift */,
 				1F83F7CD20C5D07100741FB0 /* AppDelegate.swift */,
+				1FDF255220F91D2C00A58645 /* Main.storyboard */,
 				1F83F7CF20C5D07100741FB0 /* ViewController.swift */,
-				1F83F7D120C5D07100741FB0 /* Main.storyboard */,
-				1F83F7D420C5D07400741FB0 /* Assets.xcassets */,
+				1F131DEA20FFA06100B1A8BE /* Host */,
+				1F131DEE20FFA11800B1A8BE /* Guest */,
+				1F131DF120FFA15F00B1A8BE /* Custom Classes */,
+				1F131DF020FFA14A00B1A8BE /* Designables */,
 				1F83F7D620C5D07400741FB0 /* LaunchScreen.storyboard */,
 				1F83F7D920C5D07400741FB0 /* Info.plist */,
+				1F83F7E720C63CF300741FB0 /* Fonts */,
 			);
 			path = "Juke Jam";
+			sourceTree = "<group>";
+		};
+		1F83F7E720C63CF300741FB0 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				1FFEAF7920FE856600D40505 /* SF-Pro-Display-Medium.otf */,
+				1FDF259A20FE387B00A58645 /* SF-Pro-Display-Regular.otf */,
+				1FDF259C20FE388900A58645 /* SF-Pro-Text-Light.otf */,
+				1F83F7E820C63CF300741FB0 /* Lato-Regular.ttf */,
+				1F83F7E920C63CF300741FB0 /* Comfortaa-Regular.ttf */,
+				1F410D022113A4F4002D39BA /* NotoSans-Bold.ttf */,
+				1F410D032113A4F7002D39BA /* NotoSans-Regular.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		CA3D228A3F670D507B1F5B37 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				2BF4D05F3DE8F290EA3131B2 /* Pods-Juke Jam.debug.xcconfig */,
+				CEAFA6F58BAFB84E01E981E0 /* Pods-Juke Jam.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,9 +203,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1F83F7DC20C5D07400741FB0 /* Build configuration list for PBXNativeTarget "Juke Jam" */;
 			buildPhases = (
+				3799BC28667D552DD38D989B /* [CP] Check Pods Manifest.lock */,
 				1F83F7C620C5D07100741FB0 /* Sources */,
 				1F83F7C720C5D07100741FB0 /* Frameworks */,
 				1F83F7C820C5D07100741FB0 /* Resources */,
+				F894BA3A197FFDD73B1FBBF0 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -96,6 +230,7 @@
 				TargetAttributes = {
 					1F83F7C920C5D07100741FB0 = {
 						CreatedOnToolsVersion = 9.3.1;
+						LastSwiftMigration = 0940;
 					};
 				};
 			};
@@ -122,13 +257,73 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1FFEAF7A20FE856700D40505 /* SF-Pro-Display-Medium.otf in Resources */,
+				1F83F7EB20C63CF300741FB0 /* Comfortaa-Regular.ttf in Resources */,
+				1FDF255320F91D2C00A58645 /* Main.storyboard in Resources */,
 				1F83F7D820C5D07400741FB0 /* LaunchScreen.storyboard in Resources */,
+				1F410D042113A4FD002D39BA /* NotoSans-Bold.ttf in Resources */,
+				1F410D052113A4FD002D39BA /* NotoSans-Regular.ttf in Resources */,
+				1F83F7EA20C63CF300741FB0 /* Lato-Regular.ttf in Resources */,
+				1FDF259B20FE387B00A58645 /* SF-Pro-Display-Regular.otf in Resources */,
+				1FDF259D20FE388900A58645 /* SF-Pro-Text-Light.otf in Resources */,
 				1F83F7D520C5D07400741FB0 /* Assets.xcassets in Resources */,
-				1F83F7D320C5D07100741FB0 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3799BC28667D552DD38D989B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Juke Jam-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F894BA3A197FFDD73B1FBBF0 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Juke Jam/Pods-Juke Jam-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/AlamoRecord/AlamoRecord.framework",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/AlamofireObjectMapper/AlamofireObjectMapper.framework",
+				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
+				"${BUILT_PRODUCTS_DIR}/Spartan/Spartan.framework",
+				"${BUILT_PRODUCTS_DIR}/SpotifyLogin/SpotifyLogin.framework",
+				"${BUILT_PRODUCTS_DIR}/Starscream/Starscream.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamoRecord.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireObjectMapper.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Spartan.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SpotifyLogin.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Starscream.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Juke Jam/Pods-Juke Jam-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		1F83F7C620C5D07100741FB0 /* Sources */ = {
@@ -136,21 +331,26 @@
 			buildActionMask = 2147483647;
 			files = (
 				1F83F7D020C5D07100741FB0 /* ViewController.swift in Sources */,
+				1FDF255920F94D4C00A58645 /* SearchResult.swift in Sources */,
+				1F1A44F021A0C92700FDE08A /* Routing.swift in Sources */,
+				1F131DF320FFA1A800B1A8BE /* GuestRecommendedVC.swift in Sources */,
+				1FF2D6BD21079B480070C670 /* PlaylistRecommendationsViewController.swift in Sources */,
+				1FFEAF7620FE7A6800D40505 /* DesignablePopup.swift in Sources */,
 				1F83F7CE20C5D07100741FB0 /* AppDelegate.swift in Sources */,
+				1F99BCEA21064B8D0015A71E /* EnterPlaylistVC.swift in Sources */,
+				1FF2D6BF2108E3ED0070C670 /* PlaylistRecommendedCell.swift in Sources */,
+				1FDF255520F9312E00A58645 /* Playlist.swift in Sources */,
+				1FDF254F20F7F86500A58645 /* HostAllPLVC.swift in Sources */,
+				1FFEAF7820FE816600D40505 /* PopupVC.swift in Sources */,
+				1F131DE920FF8DE100B1A8BE /* DesignableImage.swift in Sources */,
+				1FDF255120F8EE6000A58645 /* SearchSongVC.swift in Sources */,
+				1F83F7E020C5D0A900741FB0 /* DesignableButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		1F83F7D120C5D07100741FB0 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				1F83F7D220C5D07100741FB0 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		1F83F7D620C5D07400741FB0 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -278,17 +478,27 @@
 		};
 		1F83F7DD20C5D07400741FB0 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2BF4D05F3DE8F290EA3131B2 /* Pods-Juke Jam.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 58X9GKUV5T;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Juke\\ Jam",
+					"$(PROJECT_DIR)/Juke\\ Jam",
+					"$(PROJECT_DIR)/Juke\\ Jam",
+				);
 				INFOPLIST_FILE = "Juke Jam/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.jeffreybp.Juke-Jam";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -296,15 +506,24 @@
 		};
 		1F83F7DE20C5D07400741FB0 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CEAFA6F58BAFB84E01E981E0 /* Pods-Juke Jam.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 58X9GKUV5T;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Juke\\ Jam",
+					"$(PROJECT_DIR)/Juke\\ Jam",
+					"$(PROJECT_DIR)/Juke\\ Jam",
+				);
 				INFOPLIST_FILE = "Juke Jam/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.jeffreybp.Juke-Jam";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;

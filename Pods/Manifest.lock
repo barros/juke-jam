@@ -1,0 +1,45 @@
+PODS:
+  - Alamofire (4.7.3)
+  - AlamofireObjectMapper (5.1.0):
+    - Alamofire (~> 4.1)
+    - ObjectMapper (~> 3.3)
+  - AlamoRecord (1.1.1):
+    - AlamofireObjectMapper (~> 5.0)
+  - ObjectMapper (3.3.0)
+  - Spartan (1.1.1):
+    - AlamoRecord (~> 1.1.1)
+  - SpotifyLogin (0.1.6)
+  - Starscream (3.0.5)
+  - SwiftyJSON (4.1.0)
+
+DEPENDENCIES:
+  - Alamofire (~> 4.7)
+  - Spartan
+  - SpotifyLogin (~> 0.1)
+  - Starscream (~> 3.0.2)
+  - SwiftyJSON (~> 4.0)
+
+SPEC REPOS:
+  https://github.com/CocoaPods/Specs.git:
+    - Alamofire
+    - AlamofireObjectMapper
+    - AlamoRecord
+    - ObjectMapper
+    - Spartan
+    - SpotifyLogin
+    - Starscream
+    - SwiftyJSON
+
+SPEC CHECKSUMS:
+  Alamofire: c7287b6e5d7da964a70935e5db17046b7fde6568
+  AlamofireObjectMapper: 3395e698901d8b0e6f48b7d0c43bd47875325102
+  AlamoRecord: 78653b9a5da21ab5bb723167e0f552994df85d30
+  ObjectMapper: b612bf8c8e99c4dc0bb6013a51f7c27966ed5da9
+  Spartan: 0e2518f937e590b0dff19350db133110d676ddf0
+  SpotifyLogin: 9cdf82ff13e5f37e5ddc7fd07cf9793a9ebd1124
+  Starscream: faf918b2f2eff7d5dd21180646bf015a669673bd
+  SwiftyJSON: c29297daf073d2aa016295d5809cdd68045c39b3
+
+PODFILE CHECKSUM: 64efd18da45e23969321990cce714671e644d205
+
+COCOAPODS: 1.5.0
