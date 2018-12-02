@@ -12,9 +12,9 @@ class GuestRecommendedVC: UIViewController {
 
     var recommended = [SearchResult]()
     
-    @IBOutlet weak var backView: UIView!
     @IBOutlet weak var tableView: UITableView!
-    
+    @IBOutlet weak var backBtn: DesignableButton!
+  
     var backX: CGFloat = 0.0
     var backY: CGFloat = 0.0
     
@@ -24,15 +24,15 @@ class GuestRecommendedVC: UIViewController {
         tableView.delegate = self
         tableView.dataSource = self
         
-        backX = backView.frame.midX
-        backY = backView.frame.midY
+        backX = backBtn.frame.midX
+        backY = backBtn.frame.midY
         
-        backView.frame.origin = CGPoint(x: (backX-100) , y: backY)
+        backBtn.frame.origin = CGPoint(x: (backX) , y: backY+100)
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        UIView.animate(withDuration: 0.6, delay: 0.0, usingSpringWithDamping: 0.7, initialSpringVelocity: 0.8, options: [], animations: {
-            self.backView.frame.origin = CGPoint(x: (self.backX) , y: self.backY)
+        UIView.animate(withDuration: 0.6, delay: 0.0, usingSpringWithDamping: 1, initialSpringVelocity: 0.2, options: [], animations: {
+            self.backBtn.frame.origin = CGPoint(x: (self.backX) , y: self.backY)
         }, completion: nil)
     }
 }

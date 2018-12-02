@@ -13,6 +13,7 @@ import SwiftyJSON
 class HostAllPLVC: UIViewController {
     
   @IBOutlet weak var tableView: UITableView!
+  @IBOutlet weak var actIndicator: UIActivityIndicatorView!
   
   var playlists = [Playlist]()
   var devToken = ""
@@ -28,7 +29,7 @@ class HostAllPLVC: UIViewController {
     super.viewDidLoad()
     tableView.delegate = self
     tableView.dataSource = self
-    tableView.rowHeight = 87.0
+    actIndicator.startAnimating()
   }
   
   override func viewDidAppear(_ animated: Bool) {
@@ -69,6 +70,7 @@ class HostAllPLVC: UIViewController {
       switch response.result {
       case .success(let value):
         let json = JSON(value)
+        print(json)
         let results = json["data"].array
         if results != nil {
           for i in 0..<results!.count {
@@ -86,6 +88,7 @@ class HostAllPLVC: UIViewController {
           }
           self.tableView.reloadData()
           self.tableView.isHidden = false
+          self.actIndicator.stopAnimating()
         }
       case .failure(let error):
         print("ERROR: failed to get data: \(error.localizedDescription)")
@@ -171,26 +174,29 @@ class HostAllPLVC: UIViewController {
   
 }
 extension HostAllPLVC: UITableViewDelegate, UITableViewDataSource {
+  // cell layout
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     let cell = tableView.dequeueReusableCell(withIdentifier: "Cell")
   
     let playlistLabel = cell?.viewWithTag(1) as! UILabel
     playlistLabel.text = playlists[indexPath.row].name
   
-    let mainImageView = cell?.viewWithTag(3) as! UIImageView
+    let mainImageView = cell?.viewWithTag(2) as! UIImageView
     mainImageView.image = playlists[indexPath.row].image
     mainImageView.layer.cornerRadius = 7.0
   
     return cell!
   }
+  // number of rows
   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
     return playlists.count
   }
+  // cell selection
   func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
     lastPlaylistTitle = playlists[(tableView.indexPathForSelectedRow?.row)!].name
     var playlistID = playlists[(tableView.indexPathForSelectedRow?.row)!].id
     playlistID.removeFirst(2)
-    print("Selected playlist: \(playlists[(tableView.indexPathForSelectedRow?.row)!].name) (\(playlists[(tableView.indexPathForSelectedRow?.row)!].id))")
+    print("Selected playlist: \(lastPlaylistTitle) (\(playlists[(tableView.indexPathForSelectedRow?.row)!].id))")
     print(playlistID)
     requestPlaylistRecs(playlistID: playlistID)
     tableView.deselectRow(at: indexPath, animated: true)

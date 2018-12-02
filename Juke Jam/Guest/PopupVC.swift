@@ -20,20 +20,26 @@ class PopupVC: UIViewController {
   @IBOutlet weak var albumName: UILabel!
   @IBOutlet weak var artwork: UIImageView!
   @IBOutlet weak var explicitTag: UIImageView!
-  @IBOutlet weak var backView: UIView!
+  @IBOutlet weak var recommendBtn: DesignableButton!
+  @IBOutlet weak var backBtn: DesignableButton!
   
   var backX: CGFloat = 0.0
   var backY: CGFloat = 0.0
+  var recX: CGFloat = 0.0
+  var recY: CGFloat = 0.0
   
   var playlistID = ""
   
   override func viewDidLoad() {
     super.viewDidLoad()
   
-    backX = backView.frame.midX
-    backY = backView.frame.midY
+    backX = backBtn.frame.midX
+    backY = backBtn.frame.midY
+    recX = recommendBtn.frame.midX
+    recY = recommendBtn.frame.midY
   
-    backView.frame.origin = CGPoint(x: (backX-100) , y: backY)
+    backBtn.frame.origin = CGPoint(x: (backX) , y: backY+100)
+    recommendBtn.frame.origin = CGPoint(x: recX, y: (recY+200))
   
     songName.text = song.name
     artistName.text = song.artist
@@ -52,8 +58,11 @@ class PopupVC: UIViewController {
     }
   }
   override func viewWillAppear(_ animated: Bool) {
-    UIView.animate(withDuration: 0.6, delay: 0.0, usingSpringWithDamping: 0.7, initialSpringVelocity: 0.8, options: [], animations: {
-        self.backView.frame.origin = CGPoint(x: (self.backX) , y: self.backY)
+    UIView.animate(withDuration: 0.6, delay: 0.0, usingSpringWithDamping: 0.8, initialSpringVelocity: 0.2, options: [], animations: {
+      self.backBtn.frame.origin = CGPoint(x: (self.backX) , y: self.backY)
+    }, completion: nil)
+    UIView.animate(withDuration: 0.6, delay: 0.2, usingSpringWithDamping: 1, initialSpringVelocity: 0.2, options: [], animations: {
+      self.recommendBtn.frame.origin = CGPoint(x: self.recX, y: self.recY)
     }, completion: nil)
   }
   
@@ -72,7 +81,7 @@ class PopupVC: UIViewController {
     var request = URLRequest(url: postURL)
     request.httpMethod = "POST"
     request.addValue("application/json", forHTTPHeaderField: "Content-Type")
-    var parameters = ["songID": song.id, "playlistID": playlistID]
+    let parameters = ["songID": song.id, "playlistID": playlistID]
     guard let httpBody = try? JSONSerialization.data(withJSONObject: parameters, options: []) else { return }
     request.httpBody = httpBody
     

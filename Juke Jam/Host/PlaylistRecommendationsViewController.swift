@@ -18,14 +18,19 @@ class PlaylistRecommendationsViewController: UIViewController, MFMessageComposeV
   }
 
   @IBOutlet weak var tableView: UITableView!
-  
   @IBOutlet weak var noRecsLabel1: UILabel!
   @IBOutlet weak var noRecsLabel2: UILabel!
   @IBOutlet weak var playlistTitleLabel: UILabel!
   @IBOutlet weak var whiteStripUnderTitle: UIView!
   @IBOutlet weak var popUpView: DesignablePopup!
   @IBOutlet weak var backBtn: DesignableButton!
-  var lastAddPressed: PlaylistRecommendedCell!
+  @IBOutlet weak var shareBtn: DesignableButton!
+  
+  var backX: CGFloat = 0.0
+  var backY: CGFloat = 0.0
+  var shareX: CGFloat = 0.0
+  var shareY: CGFloat = 0.0
+  var animate = true
   
   var recommendations = [SearchResult]()
   var playlistID = ""
@@ -40,14 +45,28 @@ class PlaylistRecommendationsViewController: UIViewController, MFMessageComposeV
     tableView.delegate = self
     tableView.dataSource = self
     playlistTitleLabel.text = playlistTitle
+    
+    backBtn.frame.origin = CGPoint(x: (backX) , y: backY+100)
+    shareBtn.frame.origin = CGPoint(x: shareX, y: (shareY+200))
   
     if recommendations.isEmpty {
       popUpView.backgroundColor = backBtn.backgroundColor
-      whiteStripUnderTitle.isHidden = true
     } else {
       tableView.isHidden = false
       noRecsLabel1.isHidden = true
       noRecsLabel2.isHidden = true
+    }
+  }
+  
+  override func viewWillAppear(_ animated: Bool) {
+    if animate {
+      UIView.animate(withDuration: 0.6, delay: 0.0, usingSpringWithDamping: 0.8, initialSpringVelocity: 0.2, options: [], animations: {
+        self.backBtn.frame.origin = CGPoint(x: (self.backX) , y: self.backY)
+      }, completion: nil)
+      UIView.animate(withDuration: 0.6, delay: 0.2, usingSpringWithDamping: 1, initialSpringVelocity: 0.2, options: [], animations: {
+        self.shareBtn.frame.origin = CGPoint(x: self.shareX, y: self.shareY)
+      }, completion: nil)
+      animate = false
     }
   }
   
@@ -132,7 +151,7 @@ class PlaylistRecommendationsViewController: UIViewController, MFMessageComposeV
     recommendations.remove(at: indexPath.row)
     tableView.deleteRows(at: [indexPath], with: .fade)
     if recommendations.isEmpty {
-      popUpView.backgroundColor = self.backBtn.backgroundColor
+      popUpView.backgroundColor = backBtn.backgroundColor
       whiteStripUnderTitle.isHidden = true
       tableView.isHidden = true
       noRecsLabel1.isHidden = false

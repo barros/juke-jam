@@ -6,9 +6,6 @@ target 'Juke Jam' do
   use_frameworks!
 
   # Pods for Juke Jam
-  pod 'Starscream', '~> 3.0.2'
-  pod 'SpotifyLogin', '~> 0.1'
-  pod 'Spartan'
   pod 'Alamofire', '~> 4.7'
   pod 'SwiftyJSON', '~> 4.0'
 

@@ -9,7 +9,7 @@
 import Foundation
 
 class Routing {
-  private var ip = "136.167.236.111"
+  private var ip = "136.167.236.140"
   private var port = "5555"
   
   init() {

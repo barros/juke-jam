@@ -18,9 +18,6 @@ class SearchSongVC: UIViewController {
   @IBOutlet weak var recommendedSongsBtn: UIButton!
   @IBOutlet weak var tableView: UITableView!
   @IBOutlet weak var searchAboveLabel: UILabel!
-  @IBOutlet weak var strip: UIView!
-
-  //var firstSearch = true
   
   var results = [SearchResult]()
   var recommended = [SearchResult]()
@@ -45,7 +42,6 @@ class SearchSongVC: UIViewController {
   
     if recommended.isEmpty {
       recommendedSongsBtn.isHidden = true
-      strip.isHidden = true
     }
   
     print("playlistID: \(playlistID)")
@@ -65,74 +61,9 @@ class SearchSongVC: UIViewController {
     tableView.isHidden = true
   }
   
-  func getResults(query: String) {
   
-    // SEARCH ON SPOTIFY
-//        let text = (searchBar.text ?? "")
-//        _ = Spartan.search(query: text, type: .track, success: { (pagingObject: PagingObject<SimplifiedTrack>) in
-//            // Get the tracks via pagingObject.items
-//            for item in pagingObject.items {
-//                let result = SearchResult(name: item.name, artist: "", id: (item.id as! String?)!, imageURL: "")
-//                print("Result name: " + result.name)
-//                self.results.append(result)
-//                print("Results count after appending: " + String(self.results.count))
-//            }
-//            print("Final Results count: " + String(self.results.count))
-//
-//            DispatchQueue.main.async { [unowned self] in
-//                self.tableView.reloadData()
-//            }
-//        }, failure: { (error) in
-//            print(error)
-//            self.results.removeAll()
-//            DispatchQueue.main.async { [unowned self] in
-//                self.tableView.reloadData()
-//            }
-//        })
-    results.removeAll()
-  
-    let queryURLString = (searchBar.text)?.replacingOccurrences(of: " ", with: "+")
-    let url = URL(string: "https://api.music.apple.com/v1/catalog/us/search?&types=songs&limit=20&term=" + queryURLString!)
-  
-    var request = URLRequest(url: url!)
-    request.setValue("Bearer \(devToken)", forHTTPHeaderField: "Authorization")
-  
-    Alamofire.request(request).responseJSON { response in
-        switch response.result {
-      case .success(let value):
-          let json = JSON(value)
-          //print(json)
-          if let searchResults = json["results"]["songs"]["data"].array {
-              for i in 0..<searchResults.count {
-                var explicit = false
-                if searchResults[i]["attributes"]["contentRating"].stringValue == "explicit" {
-                  explicit = true
-                }
-                let result = SearchResult(name: searchResults[i]["attributes"]["name"].stringValue,
-                                          artist: searchResults[i]["attributes"]["artistName"].stringValue,
-                                          album: searchResults[i]["attributes"]["albumName"].stringValue,
-                                          id: searchResults[i]["id"].stringValue,
-                                          imageURLString: searchResults[i]["attributes"]["artwork"]["url"].stringValue,
-                                          explicit: explicit)
-                self.results.append(result)
-                //print(searchResults![i])
-            }
-          }
-          if self.results.isEmpty {
-            self.unhideLabel(withText: "No results")
-          } else {
-            self.hideLabel()
-            self.tableView.reloadData()
-          }
-      case .failure(let error):
-        print("ERROR: failed to get data: \(error.localizedDescription)")
-      }
-    }
-  }
-  // ---------------------------------------
-  // Segue methods
-  // ---------------------------------------
 
+  // MARK:- Segue Functions
   @IBAction func unwindWithSegue(_ segue: UIStoryboardSegue) {
   }
   @IBAction func songRecommendedUnwind(_ segue: UIStoryboardSegue) {
@@ -140,7 +71,6 @@ class SearchSongVC: UIViewController {
     if source.recommended {
       recommended.append(source.song)
       recommendedSongsBtn.isHidden = false
-      strip.isHidden = false
     }
   }
   override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -154,6 +84,48 @@ class SearchSongVC: UIViewController {
     }
   }
   
+  // Search song on Apple Music
+  func getResults(query: String) {
+    results.removeAll()
+    
+    let queryURLString = (searchBar.text)?.replacingOccurrences(of: " ", with: "+")
+    let url = URL(string: "https://api.music.apple.com/v1/catalog/us/search?&types=songs&limit=20&term=" + queryURLString!)
+    
+    var request = URLRequest(url: url!)
+    request.setValue("Bearer \(devToken)", forHTTPHeaderField: "Authorization")
+    
+    Alamofire.request(request).responseJSON { response in
+      switch response.result {
+      case .success(let value):
+        let json = JSON(value)
+        //print(json)
+        if let searchResults = json["results"]["songs"]["data"].array {
+          for i in 0..<searchResults.count {
+            var explicit = false
+            if searchResults[i]["attributes"]["contentRating"].stringValue == "explicit" {
+              explicit = true
+            }
+            let result = SearchResult(name: searchResults[i]["attributes"]["name"].stringValue,
+                                      artist: searchResults[i]["attributes"]["artistName"].stringValue,
+                                      album: searchResults[i]["attributes"]["albumName"].stringValue,
+                                      id: searchResults[i]["id"].stringValue,
+                                      imageURLString: searchResults[i]["attributes"]["artwork"]["url"].stringValue,
+                                      explicit: explicit)
+            self.results.append(result)
+          }
+        }
+        if self.results.isEmpty {
+          self.unhideLabel(withText: "No results")
+        } else {
+          self.hideLabel()
+          self.tableView.reloadData()
+        }
+      case .failure(let error):
+        print("ERROR: failed to get data: \(error.localizedDescription)")
+      }
+    }
+  }
+  
 }
 extension SearchSongVC: UISearchBarDelegate, UITableViewDelegate, UITableViewDataSource {
   // MARK:- SearchBar Delegates
@@ -161,19 +133,12 @@ extension SearchSongVC: UISearchBarDelegate, UITableViewDelegate, UITableViewDat
     if searchBar.text != "" {
         //firstSearch = true
       getResults(query: searchBar.text!)
+    } else {
+      tableView.isHidden = true
+      unhideLabel(withText: "Search for songs on Apple Music above")
     }
     dismissKeyboard()
   }
-  
-  // update results on text field change
-//    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-//        //results.removeAll()
-//        if searchBar.text == "" {
-//            unhideLabel(withText: "Search for songs on Apple Music above")
-//        } else {
-//            getResults(query: searchBar.text!)
-//        }
-//    }
   
   // MARK:- TableView Delegates
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
