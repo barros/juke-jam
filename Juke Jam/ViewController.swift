@@ -41,7 +41,6 @@ class ViewController: UIViewController {
   
   override func viewDidLoad() {
     super.viewDidLoad()
-    // *******************
     loadDefaultsData()
     actIndicator.startAnimating()
   

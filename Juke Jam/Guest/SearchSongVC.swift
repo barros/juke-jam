@@ -1,5 +1,5 @@
 //
-//  GuestVC.swift
+//  SearchSongVC.swift
 //  Juke Jam
 //
 //  Created by Jeffrey Barros Peña on 7/13/18.
@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import Spartan
 import Alamofire
 import SwiftyJSON
 
