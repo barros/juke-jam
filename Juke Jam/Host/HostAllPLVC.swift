@@ -68,7 +68,6 @@ class HostAllPLVC: UIViewController {
       switch response.result {
       case .success(let value):
         let json = JSON(value)
-        print(json)
         let results = json["data"].array
         if results != nil {
           for i in 0..<results!.count {
@@ -82,7 +81,6 @@ class HostAllPLVC: UIViewController {
             playlist.id = results![i]["id"].stringValue
             playlist.image = artwork!
             self.playlists.append(playlist)
-            print("Received \(self.playlists.count) playlist(s)")
           }
           self.tableView.reloadData()
           self.tableView.isHidden = false

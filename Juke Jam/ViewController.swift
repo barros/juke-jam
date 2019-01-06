@@ -62,10 +62,7 @@ class ViewController: UIViewController {
   }
   
   func fetchTokens() {
-    print("fetchTokens()")
     musicToken = tokens.getMusicToken()
-    print("ip: \(ip)")
-    print("port: \(port)")
 
     let reqURL = URL(string: "http://\(ip):\(port)/devToken/")!
     var request = URLRequest(url: reqURL)
@@ -86,7 +83,6 @@ class ViewController: UIViewController {
   }
   
   func setup() {
-    print("setup()")
     if musicToken != "" {
       checkTokenStatus()
     } else {
@@ -105,7 +101,6 @@ class ViewController: UIViewController {
   // Confirm music token is valid by sending request to Apple Music
   // API and checking status code (200=success), (403=forbidden)
   func checkTokenStatus() {
-    print("checkTokenStatus()")
     let playlistRequestURL = URL(string: "https://api.music.apple.com/v1/me/library/playlists")
     var request = URLRequest(url: playlistRequestURL!)
     request.setValue("Bearer \(devToken)", forHTTPHeaderField: "Authorization")
@@ -113,7 +108,6 @@ class ViewController: UIViewController {
     
     Alamofire.request(request).responseJSON { response in
       let code = response.response?.statusCode
-      print("res code: \(code!)")
       SKActivityIndicator.dismiss()
       if code == 200 {
         // success
