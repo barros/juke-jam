@@ -1,5 +1,5 @@
 //
-//  SearchResult.swift
+//  Song.swift
 //  Juke Jam
 //
 //  Created by Jeffrey Barros Peña on 7/13/18.

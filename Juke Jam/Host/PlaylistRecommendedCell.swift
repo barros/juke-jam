@@ -23,7 +23,7 @@ class PlaylistRecommendedCell: UITableViewCell {
   
   var songID: String?
   
-  func setUpCell(with recommendation: SearchResult) {
+  func setUpCell(with recommendation: Song) {
     songID = recommendation.id
   
     songNameLabel.text = recommendation.name

@@ -9,7 +9,6 @@
 import UIKit
 
 @IBDesignable class DesignableButton: UIButton {
-    
   @IBInspectable var borderWidth: CGFloat = 0.0 {
     didSet {
       self.layer.borderWidth = borderWidth
@@ -84,5 +83,4 @@ import UIKit
         self.transform = CGAffineTransform.identity
     }, completion: nil)
   }
-    
 }

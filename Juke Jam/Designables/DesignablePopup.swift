@@ -9,7 +9,6 @@
 import UIKit
 
 @IBDesignable class DesignablePopup: UIView {
-
   // rounded corners
   @IBInspectable var cornerRadius: CGFloat = 0.0 {
     didSet {
@@ -74,5 +73,4 @@ import UIKit
       }
     }
   }
-
 }

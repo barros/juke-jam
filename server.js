@@ -80,6 +80,12 @@ app.get('/exists', (req, res) => {
   });
 });
 
+app.get('/devToken', (req, res) => {
+  const devToken = 'eyJhbGciOiJFUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IkdHSzVONUEyTkcifQ.eyJpYXQiOjE1MzE4NzE2NjcsImV4cCI6MTU0NzQyMzY2NywiaXNzIjoiOUwzRDY3NlUyNSJ9.yfVs40BYUDIqHTSWQspOvaJzqlGv0BGmtZVAbUDXiu4xRcIVL70Ke0KAxt_65J6PCMtsccck3cvMI6e-1vbssQ'
+  console.log(`devToken: ${devToken}`);
+  res.send({devToken: devToken});
+});
+
 app.get('*', (request, response) => {
   response.sendFile(path.join(__dirname, 'client/build', 'index.html'));
 });

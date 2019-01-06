@@ -9,6 +9,7 @@
 import UIKit
 import Alamofire
 import SwiftyJSON
+import SKActivityIndicatorView
 
 class SearchSongVC: UIViewController {
   
@@ -18,10 +19,10 @@ class SearchSongVC: UIViewController {
   @IBOutlet weak var tableView: UITableView!
   @IBOutlet weak var searchAboveLabel: UILabel!
   
-  var results = [SearchResult]()
-  var recommended = [SearchResult]()
+  var results = [Song]()
+  var recommended = [Song]()
   
-  let postSongRequestString = "https://api.music.apple.com/v1/me/library/playlists/"
+  let searchReqString = "https://api.music.apple.com/v1/catalog/us/search?&types=songs&limit=20&term="
   var musicToken = ""
   var devToken = ""
   var playlistID = ""
@@ -42,8 +43,6 @@ class SearchSongVC: UIViewController {
     if recommended.isEmpty {
       recommendedSongsBtn.isHidden = true
     }
-  
-    print("playlistID: \(playlistID)")
   }
   
   @objc func dismissKeyboard() {
@@ -60,8 +59,6 @@ class SearchSongVC: UIViewController {
     tableView.isHidden = true
   }
   
-  
-
   // MARK:- Segue Functions
   @IBAction func unwindWithSegue(_ segue: UIStoryboardSegue) {
   }
@@ -87,8 +84,8 @@ class SearchSongVC: UIViewController {
   func getResults(query: String) {
     results.removeAll()
     
-    let queryURLString = (searchBar.text)?.replacingOccurrences(of: " ", with: "+")
-    let url = URL(string: "https://api.music.apple.com/v1/catalog/us/search?&types=songs&limit=20&term=" + queryURLString!)
+    let queryString = (searchBar.text)?.replacingOccurrences(of: " ", with: "+")
+    let url = URL(string: searchReqString + queryString!)
     
     var request = URLRequest(url: url!)
     request.setValue("Bearer \(devToken)", forHTTPHeaderField: "Authorization")
@@ -104,7 +101,7 @@ class SearchSongVC: UIViewController {
             if searchResults[i]["attributes"]["contentRating"].stringValue == "explicit" {
               explicit = true
             }
-            let result = SearchResult(name: searchResults[i]["attributes"]["name"].stringValue,
+            let result = Song(name: searchResults[i]["attributes"]["name"].stringValue,
                                       artist: searchResults[i]["attributes"]["artistName"].stringValue,
                                       album: searchResults[i]["attributes"]["albumName"].stringValue,
                                       id: searchResults[i]["id"].stringValue,
@@ -130,7 +127,6 @@ extension SearchSongVC: UISearchBarDelegate, UITableViewDelegate, UITableViewDat
   // MARK:- SearchBar Delegates
   func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
     if searchBar.text != "" {
-        //firstSearch = true
       getResults(query: searchBar.text!)
     } else {
       tableView.isHidden = true
@@ -166,6 +162,7 @@ extension SearchSongVC: UISearchBarDelegate, UITableViewDelegate, UITableViewDat
   }
   
   func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    SKActivityIndicator.show("", userInteractionStatus: false)
     performSegue(withIdentifier: "PopupSegue", sender: nil)
     tableView.deselectRow(at: indexPath, animated: true)
   }

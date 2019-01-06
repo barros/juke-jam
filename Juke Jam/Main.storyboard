@@ -16,9 +16,6 @@
         <array key="Lato-Regular.ttf">
             <string>Lato-Regular</string>
         </array>
-        <array key="Raleway-ExtraLight.ttf">
-            <string>Raleway-ExtraLight</string>
-        </array>
         <array key="Raleway-Medium.ttf">
             <string>Raleway-Medium</string>
         </array>
@@ -181,7 +178,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="45" id="82B-Hp-Al0"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="17"/>
+                                <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="19"/>
                                 <state key="normal" title="DISPLAY">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <color key="titleShadowColor" red="0.4756349325" green="0.47564673419999998" blue="0.47564041610000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -287,46 +284,6 @@
                                     <action selector="getStartedPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dEH-P7-VeS"/>
                                 </connections>
                             </button>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9LC-4U-X5C" customClass="DesignablePopup" customModule="Juke_Jam" customModuleProvider="target">
-                                <rect key="frame" x="132.5" y="288.5" width="110" height="110"/>
-                                <subviews>
-                                    <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8fQ-Ks-hth">
-                                        <rect key="frame" x="0.0" y="0.0" width="110" height="110"/>
-                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="cXt-Tn-GoL">
-                                            <rect key="frame" x="0.0" y="0.0" width="110" height="110"/>
-                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                            <subviews>
-                                                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="OXb-3l-elO">
-                                                    <rect key="frame" x="47" y="47" width="16" height="16"/>
-                                                </activityIndicatorView>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstItem="OXb-3l-elO" firstAttribute="leading" secondItem="cXt-Tn-GoL" secondAttribute="leading" constant="47" id="but-CI-va8"/>
-                                                <constraint firstItem="OXb-3l-elO" firstAttribute="top" secondItem="cXt-Tn-GoL" secondAttribute="top" constant="47" id="vT4-Vu-107"/>
-                                            </constraints>
-                                        </view>
-                                        <constraints>
-                                            <constraint firstItem="OXb-3l-elO" firstAttribute="centerX" secondItem="8fQ-Ks-hth" secondAttribute="centerX" id="6Pd-RO-Jj5"/>
-                                            <constraint firstItem="OXb-3l-elO" firstAttribute="centerY" secondItem="8fQ-Ks-hth" secondAttribute="centerY" id="Ptn-ig-Sj8"/>
-                                        </constraints>
-                                        <blurEffect style="light"/>
-                                    </visualEffectView>
-                                </subviews>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstItem="8fQ-Ks-hth" firstAttribute="width" secondItem="9LC-4U-X5C" secondAttribute="width" id="8B2-0p-dhd"/>
-                                    <constraint firstAttribute="width" constant="110" id="A7Z-oJ-mRS"/>
-                                    <constraint firstItem="8fQ-Ks-hth" firstAttribute="top" secondItem="9LC-4U-X5C" secondAttribute="top" id="H0M-QW-f7i"/>
-                                    <constraint firstAttribute="height" constant="110" id="KAG-3M-bvg"/>
-                                    <constraint firstItem="8fQ-Ks-hth" firstAttribute="leading" secondItem="9LC-4U-X5C" secondAttribute="leading" id="ofj-VG-Kpw"/>
-                                    <constraint firstItem="8fQ-Ks-hth" firstAttribute="height" secondItem="9LC-4U-X5C" secondAttribute="height" id="ynI-pC-nyv"/>
-                                </constraints>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <real key="value" value="0.0"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                            </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iwJ-yO-L7a" customClass="DesignableButton" customModule="Juke_Jam" customModuleProvider="target">
                                 <rect key="frame" x="81.5" y="413.5" width="212" height="37"/>
                                 <color key="backgroundColor" red="0.50050806999206543" green="0.11775869876146317" blue="0.093636982142925262" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -370,7 +327,6 @@
                         <constraints>
                             <constraint firstItem="2ZE-wY-71v" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="5Bz-BQ-7MO"/>
                             <constraint firstItem="33w-Nv-4jf" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="5q0-LZ-RvR"/>
-                            <constraint firstItem="9LC-4U-X5C" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="EyS-AW-ief"/>
                             <constraint firstItem="yCc-Fj-3Rl" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="FHu-hx-6tS"/>
                             <constraint firstItem="BBG-VL-lWV" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" constant="48" id="Gq9-l8-iD0"/>
                             <constraint firstItem="6WP-VQ-NB4" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="LdG-oS-Rb6"/>
@@ -378,7 +334,6 @@
                             <constraint firstItem="6WP-VQ-NB4" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="SWJ-1M-PIk"/>
                             <constraint firstItem="BBG-VL-lWV" firstAttribute="top" secondItem="u7q-Oz-TTs" secondAttribute="bottom" constant="6.5" id="VGR-ms-Xxh"/>
                             <constraint firstItem="BBG-VL-lWV" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="Wgn-Wm-zOC"/>
-                            <constraint firstItem="9LC-4U-X5C" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="Xjm-Xa-POu"/>
                             <constraint firstItem="u7q-Oz-TTs" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="ceu-ke-qcH"/>
                             <constraint firstItem="33w-Nv-4jf" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="crJ-Jx-0E4"/>
                             <constraint firstItem="gJ8-oo-m25" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="cxx-hS-iQV"/>
@@ -398,8 +353,6 @@
                     </view>
                     <navigationItem key="navigationItem" id="4Fg-M2-OAe"/>
                     <connections>
-                        <outlet property="actIndView" destination="9LC-4U-X5C" id="g48-bx-OZv"/>
-                        <outlet property="actIndicator" destination="OXb-3l-elO" id="WP7-bK-xGc"/>
                         <outlet property="getStartedBtn" destination="BBG-VL-lWV" id="CUK-wx-Hrg"/>
                         <outlet property="greetingLabel" destination="u7q-Oz-TTs" id="mpe-2W-IIJ"/>
                         <outlet property="jukeJamLabel" destination="2ZE-wY-71v" id="cvg-22-HF9"/>
@@ -425,21 +378,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Loading playlists..." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="qIY-3t-vyk">
-                                <rect key="frame" x="107.5" y="151" width="160" height="37"/>
-                                <color key="backgroundColor" red="0.59607843140000005" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <gestureRecognizers/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="160" id="idq-Jd-dGo"/>
-                                    <constraint firstAttribute="height" constant="37" id="rvv-7o-G7N"/>
-                                </constraints>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <fontDescription key="fontDescription" name="Raleway-ExtraLight" family="Raleway" pointSize="17"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
-                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="ukY-qT-Tdk">
-                                <rect key="frame" x="169" y="190" width="37" height="37"/>
-                            </activityIndicatorView>
                             <tableView hidden="YES" clipsSubviews="YES" contentMode="scaleToFill" bounces="NO" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="89" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="EIC-Tf-BC6">
                                 <rect key="frame" x="0.0" y="79" width="375" height="588"/>
                                 <color key="backgroundColor" red="0.59607843140000005" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -465,7 +403,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="right" translatesAutoresizingMaskIntoConstraints="NO" id="WVQ-pf-KA3">
-                                                    <rect key="frame" x="359" y="36" width="7" height="14"/>
+                                                    <rect key="frame" x="304" y="36" width="7" height="14"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="14" id="B01-Ae-80y"/>
                                                         <constraint firstAttribute="width" constant="7" id="wYt-DX-v4D"/>
@@ -554,18 +492,13 @@
                             <constraint firstItem="eFd-OO-8ZC" firstAttribute="top" secondItem="YdP-tK-T4x" secondAttribute="top" id="0zV-LE-keZ"/>
                             <constraint firstItem="eFd-OO-8ZC" firstAttribute="leading" secondItem="YdP-tK-T4x" secondAttribute="leading" id="B8s-pJ-lub"/>
                             <constraint firstItem="YdP-tK-T4x" firstAttribute="bottom" secondItem="EIC-Tf-BC6" secondAttribute="bottom" id="CCe-ot-yvx"/>
-                            <constraint firstItem="qIY-3t-vyk" firstAttribute="centerX" secondItem="YdP-tK-T4x" secondAttribute="centerX" id="G5R-xK-nwP"/>
-                            <constraint firstItem="ukY-qT-Tdk" firstAttribute="leading" secondItem="YdP-tK-T4x" secondAttribute="leading" constant="169" id="Jdw-16-MwY"/>
-                            <constraint firstItem="qIY-3t-vyk" firstAttribute="top" secondItem="eFd-OO-8ZC" secondAttribute="bottom" constant="72" id="LLs-6B-Q5G"/>
                             <constraint firstItem="eFd-OO-8ZC" firstAttribute="width" secondItem="qoZ-ex-S2v" secondAttribute="width" id="Nra-JL-m6y"/>
-                            <constraint firstItem="ukY-qT-Tdk" firstAttribute="top" secondItem="qIY-3t-vyk" secondAttribute="bottom" constant="2" id="sls-pM-ocV"/>
                             <constraint firstItem="EIC-Tf-BC6" firstAttribute="width" secondItem="qoZ-ex-S2v" secondAttribute="width" id="wFy-K3-beH"/>
                             <constraint firstItem="EIC-Tf-BC6" firstAttribute="top" secondItem="eFd-OO-8ZC" secondAttribute="bottom" id="wTR-AF-mZf"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="YdP-tK-T4x"/>
                     </view>
                     <connections>
-                        <outlet property="actIndicator" destination="ukY-qT-Tdk" id="m20-6Y-Cxe"/>
                         <outlet property="tableView" destination="EIC-Tf-BC6" id="tNO-7t-2AG"/>
                         <segue destination="I3V-x6-PEm" kind="presentation" identifier="ToPlaylistRecommendations" modalPresentationStyle="overCurrentContext" modalTransitionStyle="crossDissolve" id="WSc-ME-s8L"/>
                     </connections>
@@ -575,10 +508,10 @@
             </objects>
             <point key="canvasLocation" x="2124" y="-299.10044977511245"/>
         </scene>
-        <!--Playlist Recommendations View Controller-->
+        <!--Playlist RecommendationsVC-->
         <scene sceneID="4ZD-LZ-lqW">
             <objects>
-                <viewController id="I3V-x6-PEm" customClass="PlaylistRecommendationsViewController" customModule="Juke_Jam" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="I3V-x6-PEm" customClass="PlaylistRecommendationsVC" customModule="Juke_Jam" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Awg-nC-6xD">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -611,7 +544,7 @@
                                                 <real key="value" value="0.0"/>
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
-                                                <real key="value" value="1"/>
+                                                <real key="value" value="0.0"/>
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
                                                 <size key="value" width="0.0" height="5"/>
@@ -621,14 +554,14 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </view>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No Recommendations" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5QK-bw-nd5">
-                                        <rect key="frame" x="8" y="186.5" width="327" height="26"/>
+                                    <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Not Sharing Playlist" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5QK-bw-nd5">
+                                        <rect key="frame" x="8" y="187" width="327" height="26"/>
                                         <fontDescription key="fontDescription" name="SFProDisplay-Regular" family="SF Pro Display" pointSize="22"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Share your playlist to begin receiving recommendations!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BJB-sj-QaH">
-                                        <rect key="frame" x="8" y="220.5" width="327" height="36"/>
+                                    <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your playlist is currently not accepting recommendations. Share below to begin!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BJB-sj-QaH">
+                                        <rect key="frame" x="8" y="221" width="327" height="35"/>
                                         <fontDescription key="fontDescription" name="SFProText-Light" family="SF Pro Text" pointSize="15"/>
                                         <color key="textColor" red="0.75406885150000003" green="0.75408679249999999" blue="0.75407713649999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
@@ -664,7 +597,7 @@
                                                             </constraints>
                                                         </imageView>
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aA0-9x-WOA">
-                                                            <rect key="frame" x="300" y="14" width="27" height="27"/>
+                                                            <rect key="frame" x="245" y="14" width="27" height="27"/>
                                                             <subviews>
                                                                 <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bC4-Gr-inu" customClass="DesignableButton" customModule="Juke_Jam" customModuleProvider="target">
                                                                     <rect key="frame" x="0.0" y="0.0" width="27" height="27"/>
@@ -725,7 +658,7 @@
                                         </prototypes>
                                     </tableView>
                                 </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" red="0.59789890050888062" green="0.14791291952133179" blue="0.11731228977441788" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstItem="BJB-sj-QaH" firstAttribute="leading" secondItem="r0G-S4-pGf" secondAttribute="leading" constant="8" id="1Iq-dw-StI"/>
                                     <constraint firstItem="gQM-lM-P99" firstAttribute="top" secondItem="P0x-rl-A5T" secondAttribute="bottom" id="85e-Ci-plF"/>
@@ -760,12 +693,12 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YY9-74-ox3" customClass="DesignableButton" customModule="Juke_Jam" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="591" width="375" height="45"/>
+                                <rect key="frame" x="0.0" y="577" width="375" height="50"/>
                                 <color key="backgroundColor" red="0.28998655080795288" green="0.55609482526779175" blue="0.24668848514556885" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="45" id="G36-rA-XGE"/>
+                                    <constraint firstAttribute="height" constant="50" id="G36-rA-XGE"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="17"/>
+                                <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="18"/>
                                 <state key="normal" title="SHARE">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
@@ -798,10 +731,10 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZJf-c9-EG0" customClass="DesignableButton" customModule="Juke_Jam" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="636" width="375" height="31"/>
+                                <rect key="frame" x="0.0" y="627" width="375" height="40"/>
                                 <color key="backgroundColor" red="0.59607843140000005" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="31" id="FZt-H3-eVj"/>
+                                    <constraint firstAttribute="height" constant="40" id="FZt-H3-eVj"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="15"/>
                                 <state key="normal" title="BACK">
@@ -1332,12 +1265,12 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DTb-lq-guS" customClass="DesignableButton" customModule="Juke_Jam" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="622" width="375" height="45"/>
+                                <rect key="frame" x="0.0" y="617" width="375" height="50"/>
                                 <color key="backgroundColor" red="0.59607843140000005" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="45" id="gIq-a6-ji7"/>
+                                    <constraint firstAttribute="height" constant="50" id="gIq-a6-ji7"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="17"/>
+                                <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="19"/>
                                 <state key="normal" title="BACK">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
@@ -1511,12 +1444,12 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="07S-vE-KYg" customClass="DesignableButton" customModule="Juke_Jam" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="591" width="375" height="45"/>
+                                <rect key="frame" x="0.0" y="577" width="375" height="50"/>
                                 <color key="backgroundColor" red="0.28998655080795288" green="0.55609482526779175" blue="0.24668848514556885" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="45" id="4zl-cu-WVC"/>
+                                    <constraint firstAttribute="height" constant="50" id="4zl-cu-WVC"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="17"/>
+                                <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="18"/>
                                 <state key="normal" title="RECOMMEND">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
@@ -1548,10 +1481,10 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CEh-0W-iyZ" customClass="DesignableButton" customModule="Juke_Jam" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="636" width="375" height="31"/>
+                                <rect key="frame" x="0.0" y="627" width="375" height="40"/>
                                 <color key="backgroundColor" red="0.59607843140000005" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="31" id="Zv7-A0-QbT"/>
+                                    <constraint firstAttribute="height" constant="40" id="Zv7-A0-QbT"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="15"/>
                                 <state key="normal" title="BACK">

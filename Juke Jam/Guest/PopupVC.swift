@@ -9,10 +9,11 @@
 import UIKit
 import Alamofire
 import SwiftyJSON
+import SKActivityIndicatorView
 
 class PopupVC: UIViewController {
 
-  var song = SearchResult()
+  var song = Song()
   var recommended = false
   
   @IBOutlet weak var songName: UILabel!
@@ -32,7 +33,8 @@ class PopupVC: UIViewController {
   
   override func viewDidLoad() {
     super.viewDidLoad()
-  
+    SKActivityIndicator.dismiss()
+
     backX = backBtn.frame.midX
     backY = backBtn.frame.midY
     recX = recommendBtn.frame.midX
@@ -92,7 +94,5 @@ class PopupVC: UIViewController {
         print("Response code: \(response.response?.statusCode ?? (410))")
       }
     }
-  
   }
-  
 }

@@ -9,12 +9,10 @@
 import UIKit
 
 @IBDesignable class DesignableImage: UIImageView {
-    
     // rounded corners
     @IBInspectable var cornerRadius: CGFloat = 0.0 {
         didSet {
             self.layer.cornerRadius = cornerRadius
         }
     }
-    
 }

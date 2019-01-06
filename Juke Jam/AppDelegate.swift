@@ -10,7 +10,9 @@ import UIKit
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
-
+  
+  let Deeplinker = DeeplinkManager()
+  
   var window: UIWindow?
 
   func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
@@ -37,7 +39,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
   func applicationDidBecomeActive(_ application: UIApplication) {
     // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
-    //SocketIOManager.sharedInstance.establishConnection()
+    // handle any deeplink
+    Deeplinker.checkDeepLink()
+  }
+  
+  // MARK: Deeplinks
+  func application(_ app: UIApplication, open url: URL, options: [UIApplicationOpenURLOptionsKey : Any] = [:]) -> Bool {
+    return Deeplinker.handleDeeplink(url: url)
   }
 
   func applicationWillTerminate(_ application: UIApplication) {

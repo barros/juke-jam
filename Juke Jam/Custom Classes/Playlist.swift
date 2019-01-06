@@ -6,7 +6,6 @@
 //  Copyright © 2018 Barros Peña. All rights reserved.
 //
 
-import Foundation
 import UIKit
 
 class Playlist: NSObject, NSCoding {

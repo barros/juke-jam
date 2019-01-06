@@ -10,7 +10,7 @@ import UIKit
 
 class GuestRecommendedVC: UIViewController {
 
-  var recommended = [SearchResult]()
+  var recommended = [Song]()
   
   @IBOutlet weak var tableView: UITableView!
   @IBOutlet weak var backBtn: DesignableButton!

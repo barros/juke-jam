@@ -6,11 +6,11 @@
 //  Copyright © 2018 Barros Peña. All rights reserved.
 //
 
-import Foundation
+//import Foundation
 
 class Routing {
-  private var ip = "136.167.236.140"
-  private var port = "5555"
+  private var ip = "" // insert IP address here
+  private var port = "" // insert port number here
   
   init() {
   }
