@@ -11,6 +11,6 @@
 #endif
 
 
-FOUNDATION_EXPORT double AlamoRecordVersionNumber;
-FOUNDATION_EXPORT const unsigned char AlamoRecordVersionString[];
+FOUNDATION_EXPORT double SKActivityIndicatorViewVersionNumber;
+FOUNDATION_EXPORT const unsigned char SKActivityIndicatorViewVersionString[];
 
